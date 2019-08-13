@@ -54,6 +54,13 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
+		<key>Base.lproj/Main.storyboard</key>
+		<dict>
+			<key>Path</key>
+			<string>Main.storyboard</string>
+			<key>SortOrder</key>
+			<integer>99</integer>
+		</dict>
 		<key>Classes/API/BaseApiClient.h</key>
 		<dict>
 			<key>Group</key>
