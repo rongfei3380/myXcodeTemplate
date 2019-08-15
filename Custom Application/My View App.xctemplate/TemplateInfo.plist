@@ -8,13 +8,12 @@
 	<string>com.apple.dt.unit.myViewApplication</string>
 	<key>Ancestors</key>
 	<array>
-		<string>com.apple.dt.unit.storyboardApplication</string>
 		<string>com.apple.dt.unit.coreDataCocoaTouchApplication</string>
 	</array>
 	<key>Concrete</key>
 	<true/>
 	<key>Description</key>
-	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view, and a storyboard or nib file that contains the view.</string>
+	<string>This template provides a starting point for an application that uses a single view. It provides a view controller to manage the view,  custome fo myself.</string>
 	<key>SortOrder</key>
 	<integer>99</integer>
 	<key>Options</key>
@@ -26,6 +25,19 @@
 			<dict>
 				<key>Objective-C</key>
 				<dict>
+					<key>Definitions</key>
+					<dict>
+						<key>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</key>
+						<string>_window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+_window.backgroundColor=[UIColor grayColor];
+[_window makeKeyAndVisible];
+    
+ViewController *viewController = [[ViewController alloc] init];
+    
+UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:viewController];
+    
+self.window.rootViewController= nav;</string>
+					</dict>
 					<key>Nodes</key>
 					<array>
 						<string>ViewController.h:comments</string>
@@ -36,6 +48,8 @@
 						<string>ViewController.m:extension</string>
 						<string>ViewController.m:implementation:methods:viewDidLoad(- (void\)viewDidLoad)</string>
 						<string>ViewController.m:implementation:methods:viewDidLoad:super</string>
+						<string>AppDelegate.m:imports:importHeader:ViewController.h</string>
+						<string>AppDelegate.m:implementation:methods:applicationdidFinishLaunchingWithOptions:body</string>
 					</array>
 				</dict>
 				<key>Swift</key>
@@ -54,13 +68,6 @@
 	</array>
 	<key>Definitions</key>
 	<dict>
-		<key>Base.lproj/Main.storyboard</key>
-		<dict>
-			<key>Path</key>
-			<string>Main.storyboard</string>
-			<key>SortOrder</key>
-			<integer>99</integer>
-		</dict>
 		<key>Classes/API/BaseApiClient.h</key>
 		<dict>
 			<key>Group</key>
